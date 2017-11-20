@@ -37591,3 +37591,61 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/books" for 127.0.0.1 at 2017-11-20 16:44:42 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 235ms (Views: 221.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2017-11-20 16:44:56 +0530
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 63ms (Views: 29.4ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/books/6" for 127.0.0.1 at 2017-11-20 16:45:06 +0530
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QsrYLbEZzINPq3b7iixtpaLbhy/T8msQNYSlEs72DyWuvOzy1VSZpY1UW9a6R1rV/1EcH8szRRxyGyhKszYn9w==", "book"=>{"title"=>"ch", "desc"=>"chemestry"}, "commit"=>"submit", "id"=>"6"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `books` SET `title` = 'ch', `updated_at` = '2017-11-20 11:15:06' WHERE `books`.`id` = 6[0m
+  [1m[35m (112.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#update, rendering head :no_content
+Completed 204 No Content in 129ms (ActiveRecord: 113.7ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-11-20 16:45:11 +0530
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/books/9" for 127.0.0.1 at 2017-11-20 16:45:22 +0530
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"W8wnohGGJvqT3nk6ZNA35qYIoRIjX8RaCAaBvzKqCt+3uhN9dctz3FEhVBdUuwCW+4I6Ijue6lZPmQznT2oiDQ==", "id"=>"9"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `books` WHERE `books`.`id` = 9[0m
+  [1m[35m (277.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#destroy, rendering head :no_content
+Completed 204 No Content in 297ms (ActiveRecord: 278.8ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-11-20 16:45:26 +0530
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+

@@ -9,9 +9,9 @@ def new
 
 def create
 	e=Book.new
-e.title=params[:book][:title]
-e.desc = params[:book][:desc]
-e.save
+s.title=params[:book][:title]
+s.desc = params[:book][:desc]
+s.save
 
 end
 

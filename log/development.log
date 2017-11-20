@@ -37442,3 +37442,152 @@ Processing by BooksController#edit as HTML
 Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/books/5/edit" for 127.0.0.1 at 2017-11-20 15:43:06 +0530
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 5 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 261ms (Views: 227.0ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/books/5" for 127.0.0.1 at 2017-11-20 15:43:14 +0530
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nJb1dmBtoomJzu3s/p2BxXRLgVtQt8w7a37KQv+2vuNw4MGpBCD3r0sxwMHO9ra1KcEaa0h24jcs4UcagnaWMQ==", "book"=>{"title"=>"PH 1", "desc"=>"Physics"}, "commit"=>"Save changes", "id"=>"5"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE `books` SET `title` = 'PH 1', `updated_at` = '2017-11-20 10:13:14' WHERE `books`.`id` = 5[0m
+  [1m[35m (126.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#update, rendering head :no_content
+Completed 204 No Content in 170ms (ActiveRecord: 128.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-11-20 15:50:42 +0530
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/edit" for 127.0.0.1 at 2017-11-20 15:50:56 +0530
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2017-11-20 15:51:07 +0530
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 5 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2017-11-20 15:53:10 +0530
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 5 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 239ms (Views: 209.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2017-11-20 15:53:16 +0530
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 31.4ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/books/6" for 127.0.0.1 at 2017-11-20 15:53:51 +0530
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lKVAUfqYAUO1bq/H1Y/YhFWyHvIZ+d3weyam16Y92gd403SOntVUZXeRgurl5O/0CDiFwgE48/w8uSuP2/3y1Q==", "book"=>{"title"=>"ch", "desc"=>"chemestry"}, "commit"=>"Save changes", "id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#update, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2017-11-20 15:54:00 +0530
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/books/6" for 127.0.0.1 at 2017-11-20 15:54:05 +0530
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wvzsv/Vu2m1Ffr311imDzvXmpAwD34NAnfjHLnlepBguithgkSOPS4eBkNjmQrS+qGw/PBserUzaZ0p2BJ6Myg==", "book"=>{"title"=>"ch1", "desc"=>"chemestry"}, "commit"=>"Save changes", "id"=>"6"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `books` SET `title` = 'ch1', `updated_at` = '2017-11-20 10:24:05' WHERE `books`.`id` = 6[0m
+  [1m[35m (150.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#update, rendering head :no_content
+Completed 204 No Content in 167ms (ActiveRecord: 151.1ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2017-11-20 15:56:10 +0530
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/books/6" for 127.0.0.1 at 2017-11-20 15:56:13 +0530
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0pOziEYZpLAKG5vMSsWc/vtwCHTPUPE6hfjwuzrIywk+5YdXIlTxlsjktuF6rquOpvqTRNeR3zbCZ33jRwjj2w==", "book"=>{"title"=>"ch1", "desc"=>"chemestry"}, "commit"=>"Save changes", "id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#update, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2017-11-20 16:17:23 +0530
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 239ms (Views: 208.6ms | ActiveRecord: 3.6ms)
+
+
+Started PUT "/books/6" for 127.0.0.1 at 2017-11-20 16:17:36 +0530
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdssDNyi5Thnj8YriiqD+ilyVWUpzXXpldJhwFEj91T1rRjTuO+wHqVw6wa6QbSKdPjOVTEMW+XSTeyYLOPfhg==", "book"=>{"title"=>"ch2", "desc"=>"chemestry"}, "commit"=>"Save changes", "id"=>"6"}
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `books` SET `title` = 'ch2', `updated_at` = '2017-11-20 10:47:36' WHERE `books`.`id` = 6[0m
+  [1m[35m (151.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#update, rendering head :no_content
+Completed 204 No Content in 198ms (ActiveRecord: 154.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-11-20 16:17:42 +0530
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+

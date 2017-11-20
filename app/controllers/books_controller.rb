@@ -8,7 +8,7 @@ def new
 	end 
 
 def create
-	e=Book.new
+	e=Book.new	
 s.title=params[:book][:title]
 s.desc = params[:book][:desc]
 s.save
@@ -21,19 +21,19 @@ end
 	
 
 def edit
-@book= Book.find(params[:id])
+@book1= Book.find(params[:id])
 		
 end	
 
 def update	
-@book = Book.find(params[:id])
-@book.update_attributes(params.require(:book).permit(:title, :desc)	)
+@book1 = Book.find(params[:id])
+@book1.update_attributes(params.require(:book).permit(:title, :desc)	)
 
 end
 
 def destroy
-     @book =Book.find(params[:id])
-     @book.destroy		
+     @book1 =Book.find(params[:id])
+     @book1.destroy		
   end
 
 

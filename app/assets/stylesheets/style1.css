@@ -1,0 +1,26 @@
+
+h1 {
+    color: blue;
+}
+p {
+    color: red;
+}
+
+h1 {
+    color: yellow;
+    font-family: verdana;
+    font-size: 300%;
+
+}
+
+
+div.cities {
+background-color: black;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
+
+div.cities1 {
+border: 1px solid red;
+}

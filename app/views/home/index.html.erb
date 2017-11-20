@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<image src= "/assets/large/images.jpg" width="500" height="600" >	
+<h1 style="text-align:left;"> PADMA  KAMAT</h1>
+<p style="text-align:center;"> rajesh kamat</p>
+
+<h1 style="color:blue;">This is a Blue Heading</h1>
+
+</body>
+</html>
+<link rel="stylesheet" href="style1.css">
+
+<div class="cities">
+<h1>This is a heading</h1>
+</div>
+
+<div class="cities1">
+
+<p>This is a paragraph.</p>
+</div>	
+<%= form_tag "/user", method: 'post' do %>
+  <input type="text" name="firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname">
+  <input type='submit'>
+<% end %>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/home/rajesh/Desktop/test_project/home_controller.rb".</p>
+	
+
+

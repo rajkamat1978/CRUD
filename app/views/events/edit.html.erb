@@ -1,0 +1,7 @@
+<%= form_for @event, method: "PUT"  do |f| %>
+<label>title</label>
+<%= f.text_field :title %>
+<label>description</label>
+<%= f.text_field :desc %>	
+<%= f.submit "Save changes" %>
+<% end %>

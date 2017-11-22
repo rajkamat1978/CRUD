@@ -1,18 +1,30 @@
 class BooksController < ApplicationController
 	def index
-	@books = Book.all	
+	@books = Book.all
+		
 end
 
 def new
-
+ @book= Book.new
+ @author = @book.build_author
 	end 
 
 def create
-	e=Book.new	
-s.title=params[:book][:title]
-s.desc = params[:book][:desc]
-s.save
+#params.require(:book).permit(     :title, :desc,     author: [ :name, :email ]   )
+s=Book.create(params.require(:book).permit(     :title, :desc, :author,    author_attributes: [ :name, :email ]   ))
 
+
+
+#params.require(:book).permit(:id, :title, :desc, book_author_attributes: [:name, :email, :final_submit, :submit, :destroy])
+
+#b.build_author(params.require(:book).permit(:id, :title, :desc, author_attributes: [:id, :name, :desc]))
+
+#def book_params 
+	
+#end
+end
+def book_params
+        
 end
 
 def show

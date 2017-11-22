@@ -1,9 +1,14 @@
-<%= form_for Book.new, :url => { :action => "create" } do |f| %>
+<%= form_for @book, :url => { :action => "create" } do |f| %>
 <label>title</label>
 <%= f.text_field :title %>
 <br>
 <label>description</label>
 <%= f.text_field :desc %>
+
+<%= f.fields_for @author do |fact| %>
+ <%= fact.text_field :name %>
+<%= fact.text_field :email %>
+<% end %>
 <%= f.submit "Submit" %>
 <% end %>
 

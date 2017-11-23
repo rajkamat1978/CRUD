@@ -10,21 +10,11 @@ def new
 	end 
 
 def create
-#params.require(:book).permit(     :title, :desc,     author: [ :name, :email ]   )
-s=Book.create(params.require(:book).permit(     :title, :desc, :author,    author_attributes: [ :name, :email ]   ))
-
-
-
-#params.require(:book).permit(:id, :title, :desc, book_author_attributes: [:name, :email, :final_submit, :submit, :destroy])
-
-#b.build_author(params.require(:book).permit(:id, :title, :desc, author_attributes: [:id, :name, :desc]))
-
-#def book_params 
-	
-#end
-end
-def book_params
-        
+  params.require(:book).permit(     :title, :desc,     author: [ :name, :email ]   )
+  s=Book.new(:title => params[:book][:title], :desc => params[:book][:desc])
+  s.save
+  author = s.build_author(:name => params[:book][:author][:name], :email => params[:book][:author][:email])
+  author.save
 end
 
 def show

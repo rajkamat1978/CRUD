@@ -41320,3 +41320,41 @@ No template found for BooksController#create, rendering head :no_content
 Completed 204 No Content in 232ms (ActiveRecord: 215.8ms)
 
 
+Started GET "/books/new" for 127.0.0.1 at 2017-11-23 12:05:22 +0530
+  [1m[35m (38.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (32.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 553ms (Views: 477.5ms | ActiveRecord: 20.1ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2017-11-23 12:05:41 +0530
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n2G5QANpQrBVztcEawNN1vGpokUdPtT3qt92DVnLRkTRJzC0Xq09yWlnt2wkKccJ0jxj68Olltzg/XgTlsKfwQ==", "book"=>{"title"=>"PH ", "desc"=>"Physics", "author"=>{"name"=>"rajesh", "email"=>"rajakama@yahoo.com"}}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (60.2ms)[0m  [1m[32mINSERT INTO `books` (`title`, `desc`, `created_at`, `updated_at`) VALUES ('PH ', 'Physics', '2017-11-23 06:35:41', '2017-11-23 06:35:41')[0m
+  [1m[35m (116.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  `authors`.* FROM `authors` WHERE `authors`.`book_id` = 130 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `authors` (`name`, `email`, `created_at`, `updated_at`, `book_id`) VALUES ('rajesh', 'rajakama@yahoo.com', '2017-11-23 06:35:41', '2017-11-23 06:35:41', 130)[0m
+  [1m[35m (71.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for BooksController#create, rendering head :no_content
+Completed 204 No Content in 293ms (ActiveRecord: 249.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-11-23 12:07:50 +0530
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 184ms (Views: 90.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2017-11-23 12:07:59 +0530
+  
+ActionController::RoutingError (undefined method `author=' for nil:NilClass):
+  
+app/controllers/authors_controller.rb:3:in `<class:AuthorsController>'
+app/controllers/authors_controller.rb:1:in `<top (required)>'
